@@ -3,7 +3,7 @@
 /* MOBILE */
 @media screen and (min-width: 270px) {
   #body {
-    background-color: #5B57F2;
+    background-color: #5b57f2;
     margin: 0;
     padding: 0;
   }
@@ -52,7 +52,7 @@
   .title-decoration {
     width: 50px;
     height: 5px;
-    background-color: #26C281;
+    background-color: #26c281;
     border-radius: 30px;
   }
   /* OPCIONES MENSUAL Y ANUAL */
@@ -86,20 +86,20 @@
   }
   /* BOTÓN MENSUAL */
   .monthly {
-    background-color: #26C281;
+    background-color: #26c281;
     color: white;
     font-family: "Poppins", sans-serif;
   }
   /* BOTÓN ANUAL */
   .annualy {
-    background-color: #E7FAF4;
-    color: #26C281;
+    background-color: #e7faf4;
+    color: #26c281;
     font-family: "Poppins", sans-serif;
   }
   /* TARJETA DE LOS PRODUCTOS */
   .card {
-    height: 500px;
-    width: 270px;
+    height: 425px;
+    width: 260px;
     background-color: white;
     border-radius: 30px;
     margin: 15px auto;
@@ -110,9 +110,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -133,13 +133,18 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    /* TITULO */
     /* ICONOS */
     /* BOTÓN DEL PRODUCTO */
+  }
+  .card-main__title, .card-description__title {
+    font-size: 20px;
+    margin: 10px 0 10px 0;
   }
   .card-main__icon, .card-description__icon {
     height: 80px;
     width: 80px;
-    background-color: #26C281;
+    background-color: #26c281;
     border-radius: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -156,15 +161,19 @@
     width: 230px;
     border-radius: 25px;
     border: none;
-    background-color: #26C281;
+    background-color: #26c281;
     color: white;
     font-size: 17px;
+  }
+  .card-main {
+    margin-bottom: 20px;
   }
   .card-services {
     list-style: none;
     padding: 0;
-    color: #A39DA9;
+    color: #a39da9;
     text-align: center;
+    font-size: 14px;
   }
   /* PRECIO */
   .price {
@@ -184,7 +193,46 @@
   .price-month {
     margin: 0 0 10px 0;
     font-size: 13px;
-    color: #A39DA9;
+    color: #a39da9;
+  }
+  /* GRAFICO TORTA */
+  .cake {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    background-image: conic-gradient(#26c281 0deg, #26c281 90deg 135deg, white 135deg);
+    position: relative;
+    /* PORCIÓN 1 */
+    /* PORCIÓN 2 */
+  }
+  .cake::before {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid white;
+    border-radius: 50%;
+    -webkit-transform: rotate(215deg);
+            transform: rotate(215deg);
+    right: -1px;
+  }
+  .cake::after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 15px solid white;
+    border-radius: 50%;
+    -webkit-transform: rotate(285deg);
+            transform: rotate(285deg);
+    top: 9px;
+    right: -2px;
   }
   /* GRAFICO */
   .grafico {
@@ -200,8 +248,9 @@
     background-color: white;
   }
   .eje-y {
-    height: 30px;
+    height: 25px;
     width: 3px;
+    top: 5px;
   }
   .eje-x {
     height: 3px;
@@ -238,7 +287,7 @@
     width: 0;
     top: 9px;
     right: 1px;
-    background-color: #26C281;
+    background-color: #26c281;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     border-left: 6px solid transparent;
@@ -272,7 +321,7 @@
     left: 4px;
   }
   .primer-edificio__chimenea:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 2.8px;
     height: 6px;
@@ -283,19 +332,20 @@
   .primer-edificio__ventanas {
     height: 4px;
     width: 4px;
-    background-color: #26C281;
+    background-color: #26c281;
     position: absolute;
     left: 2.4px;
   }
   .ventanas-superiores {
     top: 4px;
   }
-  .ventanas-superiores::before, .ventanas-superiores::after {
-    content: '';
+  .ventanas-superiores::before,
+  .ventanas-superiores::after {
+    content: "";
     height: 4px;
     width: 4px;
     position: absolute;
-    background-color: #26C281;
+    background-color: #26c281;
     left: 6.8px;
   }
   .ventanas-superiores::after {
@@ -304,12 +354,13 @@
   .ventanas-inferiores {
     top: 12px;
   }
-  .ventanas-inferiores::before, .ventanas-inferiores::after {
-    content: '';
+  .ventanas-inferiores::before,
+  .ventanas-inferiores::after {
+    content: "";
     height: 4px;
     width: 4px;
     position: absolute;
-    background-color: #26C281;
+    background-color: #26c281;
     left: 6.8px;
     top: 8px;
   }
@@ -323,11 +374,11 @@
     left: 12px;
   }
   .segundo-edificio::before {
-    content: '';
+    content: "";
     height: 4px;
     width: 4px;
     position: absolute;
-    background-color: #26C281;
+    background-color: #26c281;
     top: 2px;
     left: 4px;
   }
@@ -335,16 +386,16 @@
     height: 4px;
     width: 4px;
     position: absolute;
-    background-color: #26C281;
+    background-color: #26c281;
     top: 10px;
     left: 4px;
   }
   .segundo-edificio__ventanas::before {
-    content: '';
+    content: "";
     height: 4px;
     width: 4px;
     position: absolute;
-    background-color: #26C281;
+    background-color: #26c281;
     top: 8px;
     left: 0;
   }
@@ -358,16 +409,16 @@
     height: 4px;
     width: 4px;
     position: absolute;
-    background-color: #26C281;
+    background-color: #26c281;
     top: 4px;
     left: 4px;
   }
   .tercer-edificio__ventanas::before {
-    content: '';
+    content: "";
     height: 4px;
     width: 4px;
     position: absolute;
-    background-color: #26C281;
+    background-color: #26c281;
     top: 8px;
     left: 0;
   }
@@ -402,6 +453,7 @@
   }
   .card-main {
     margin-left: 100px;
+    width: 100px;
   }
   .card-description {
     margin-right: 100px;
@@ -424,7 +476,7 @@
   .card-main__button, .card-description__button {
     margin-top: 15px;
     position: absolute;
-    right: -40px;
+    right: -45px;
     bottom: -60px;
   }
   /* PRECIO */
@@ -451,16 +503,13 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   /* QUITA EL EL VALOR STICKY PARA QUE EN DESKTOP NO SE MUEVA */
   .options {
     position: static;
     width: 220px;
-    -webkit-box-shadow: 0px 5px 10px 3px #A39DA9;
-            box-shadow: 0px 5px 10px 3px #A39DA9;
+    -webkit-box-shadow: 0px 5px 10px 3px #a39da9;
+            box-shadow: 0px 5px 10px 3px #a39da9;
   }
   .options-button {
     cursor: pointer;
@@ -473,7 +522,7 @@
     width: 90vw;
     max-width: 1000px;
     background-color: white;
-    margin: 50px 0;
+    margin: 100px 0;
     border-radius: 25px;
   }
   /* TITULO */
@@ -522,6 +571,12 @@
     font-family: "Poppins", sans-serif;
     -webkit-box-shadow: 0px 5px 10px 3px #aaaaaa;
             box-shadow: 0px 5px 10px 3px #aaaaaa;
+    -webkit-transition-property: -webkit-box-shadow;
+    transition-property: -webkit-box-shadow;
+    transition-property: box-shadow;
+    transition-property: box-shadow, -webkit-box-shadow;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
     /* SERVICIOS */
   }
   .card-main, .card-description {
@@ -548,7 +603,7 @@
     margin-top: 0;
   }
   .card-main__icon, .card-description__icon {
-    background-color: #26C281;
+    background-color: #26c281;
     border-radius: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -565,15 +620,16 @@
     width: 200px;
     border-radius: 25px;
     border: none;
-    background-color: #26C281;
+    background-color: #26c281;
     color: white;
     font-size: 12px;
     position: static;
+    right: 0;
     cursor: pointer;
     -webkit-transition-property: background-color;
     transition-property: background-color;
-    -webkit-transition-duration: .5s;
-            transition-duration: .5s;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
   }
   .card-main__button:hover, .card-description__button:hover {
     background-color: #36faa8;
@@ -588,8 +644,12 @@
   .card-services {
     list-style: none;
     padding: 0;
-    color: #646464;
+    color: #a39da9;
     font-size: 10px;
+  }
+  .card:hover {
+    -webkit-box-shadow: 0px 5px 10px 3px #616161;
+            box-shadow: 0px 5px 10px 3px #616161;
   }
   /* PRECIO */
   .price {
@@ -615,15 +675,15 @@
   }
   /* EFECTO BOTÓN NO SELECCIONADO */
   .none-selected {
-    background-color: #E7FAF4;
-    color: #26C281;
+    background-color: #e7faf4;
+    color: #26c281;
     -webkit-transition-property: border;
     transition-property: border;
-    -webkit-transition-duration: .1s;
-            transition-duration: .1s;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
   }
   .none-selected:hover {
-    border: 3px solid #26C281;
+    border: 3px solid #26c281;
   }
 }
 

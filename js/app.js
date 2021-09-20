@@ -7,7 +7,7 @@ const basicPrice = document.getElementById('basic-price');
 const premiumPrice = document.getElementById('premium-price');
 const businessPrice = document.getElementById('business-price');
 const packageOption = document.getElementsByClassName('price-month');
-console.log(basicPrice)
+const cardButton = document.getElementsByClassName('card-description__button');
 
 /* EVENTS */
 // Carga los eventListenners
