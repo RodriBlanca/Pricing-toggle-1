@@ -1,0 +1,608 @@
+// IMPORTACIÓN DE GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+// VARIABLES
+// Color fondo / violeta
+$background: #5B57F2;
+// Color detalles / verde
+$mainGreen: #26C281;
+// Color detalles 2 / botón no seleccionado / verde más claro
+$secondGreen: #E7FAF4;
+// Color letras / gris
+$details: #A39DA9;
+// Letra 
+$mainFont: 'Poppins', sans-serif;
+
+/* MOBILE */
+@media screen and (min-width: 270px) {
+    #body {
+        background-color: $background;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* CONTENEDOR */
+    .pricing-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .title {
+        height: 100px;
+        width: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 25px;
+        margin-top: 25px;
+
+        /* TITULO */
+        &-text {
+            font-family: $mainFont; 
+            margin: 0 0 15px 0; 
+        }
+
+        /* LINEA DE DECORACIÓN */
+        &-decoration {
+            width: 50px;
+            height: 5px;
+            background-color: $mainGreen;
+            border-radius: 30px;
+        }
+    }
+
+    /* OPCIONES MENSUAL Y ANUAL */
+    .options {
+        width: 250px;
+        height: 65px;
+        background-color: white;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 20px;
+        position: sticky;
+        top: 10px;
+        box-shadow: 0px 5px 10px 3px rgb(41, 41, 41);
+        z-index: 100;
+
+        &-button {
+            width: 115px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+        }
+    }
+
+    /* BOTÓN MENSUAL */
+    .monthly {
+        background-color: $mainGreen;
+        color: white;
+        font-family: $mainFont;
+    }
+
+    /* BOTÓN ANUAL */
+    .annualy {
+        background-color: $secondGreen;
+        color: $mainGreen;
+        font-family: $mainFont;
+    }
+
+    /* TARJETA DE LOS PRODUCTOS */
+    .card {
+        height: 500px;
+        width: 270px;
+        background-color: white;
+        border-radius: 30px;
+        margin: 15px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: $mainFont;
+
+        &-main,
+        &-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /* ICONOS */
+            &__icon {
+                height: 80px;
+                width: 80px;
+                background-color: $mainGreen;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* BOTÓN DEL PRODUCTO */
+            &__button {
+                height: 50px;
+                width: 230px;
+                border-radius: 25px;
+                border: none;
+                background-color: $mainGreen;
+                color: white;
+                font-size: 17px;
+            }
+        }
+
+        /* SERVICIOS */
+        &-services {
+            list-style: none;
+            padding: 0;
+            color: $details;
+            text-align: center;
+        }
+    }
+
+    /* PRECIO */
+    .price {
+        display: flex;
+        align-items: flex-end;
+
+        &-number {
+            font-size: 37px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* MENSUAL O ANUAL */
+        &-month {
+            margin: 0 0 10px 0;
+            font-size: 13px;
+            color: $details;
+        }
+    }
+
+    /* GRAFICO */
+    .grafico {
+        height: 30px;
+        width: 30px;
+        overflow: hidden;
+        -o-object-fit: contain;
+        object-fit: contain;
+        position: relative;
+    }
+    
+    .grafico-linea {
+        position: absolute;
+        background-color: white;
+    }
+    
+    .eje-y {
+        height: 30px;
+        width: 3px;
+    }
+    
+    .eje-x {
+        height: 3px;
+        width: 30px;
+        bottom: 0;
+    }
+    
+    .ascendente1 {
+        height: 3px;
+        width: 8px;
+        top: 50%;
+        left: 5px;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+    }
+    
+    .descendente {
+        height: 3px;
+        width: 10px;
+        top: 50%;
+        left: 9px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+    
+    .ascendente2 {
+        height: 3px;
+        width: 8px;
+        top: 50%;
+        left: 15px;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+    }
+    
+    .flecha {
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: 9px;
+        right: 1px;
+        background-color: $mainGreen;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 7px solid white;
+    }
+
+    /* EDIFICIOS */
+    .edificios {
+        height: 30px;
+        width: 30px;
+        position: relative;
+    }
+    
+    .edificio {
+        position: absolute;
+        background-color: white;
+    }
+    
+    .primer-edificio {
+        width: 16px;
+        height: 32px;
+        bottom: 0;
+        left: -4px;
+        /* CHIMENEAS */
+        /* VENTANAS */
+    }
+    
+    .primer-edificio__chimenea {
+        position: absolute;
+        width: 2.8px;
+        height: 6px;
+        background-color: white;
+        top: -6px;
+        left: 4px;
+    }
+    
+    .primer-edificio__chimenea:before {
+        content: '';
+        position: absolute;
+        width: 2.8px;
+        height: 6px;
+        background-color: white;
+        top: 0;
+        left: 6.8px;
+    }
+    
+    .primer-edificio__ventanas {
+        height: 4px;
+        width: 4px;
+        background-color: $mainGreen;
+        position: absolute;
+        left: 2.4px;
+    }
+    
+    .ventanas-superiores {
+        top: 4px;
+    }
+    
+    .ventanas-superiores::before, .ventanas-superiores::after {
+        content: '';
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        background-color: $mainGreen;
+        left: 6.8px;
+    }
+    
+    .ventanas-superiores::after {
+        top: 8px;
+    }
+    
+    .ventanas-inferiores {
+        top: 12px;
+    }
+    
+    .ventanas-inferiores::before, .ventanas-inferiores::after {
+        content: '';
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        background-color: $mainGreen;
+        left: 6.8px;
+        top: 8px;
+    }
+    
+    .ventanas-inferiores::after {
+        left: 0;
+    }
+    
+    .segundo-edificio {
+        width: 12px;
+        height: 38px;
+        bottom: 0;
+        left: 12px;
+    }
+    
+    .segundo-edificio::before {
+        content: '';
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        background-color: $mainGreen;
+        top: 2px;
+        left: 4px;
+    }
+    
+    .segundo-edificio__ventanas {
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        background-color: $mainGreen;
+        top: 10px;
+        left: 4px;
+    }
+    
+    .segundo-edificio__ventanas::before {
+        content: '';
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        background-color: $mainGreen;
+        top: 8px;
+        left: 0;
+    }
+    
+    .tercer-edificio {
+        width: 12px;
+        height: 24px;
+        bottom: 0;
+        left: 24px;
+    }
+    
+    .tercer-edificio__ventanas {
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        background-color: $mainGreen;
+        top: 4px;
+        left: 4px;
+    }
+    
+    .tercer-edificio__ventanas::before {
+        content: '';
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        background-color: $mainGreen;
+        top: 8px;
+        left: 0;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 600px) {
+
+    /* TITULO */
+    .title {
+        height: 100px;
+        width: 95vw;
+        max-width: 620px;
+    }
+
+    /* TARJETAS DE LOS PRODUCTOS */
+    .card {
+        height: 300px;
+        width: 95vw;
+        max-width: 620px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-main {
+            margin-left: 100px;
+        }
+
+        &-description {
+            margin-right: 100px;
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            position: relative;
+        }
+
+        &-main,
+        &-description {
+            &__title {
+                margin-top: 30px;
+                font-size: 30px;
+            }
+
+            &__icon {
+                margin-top: 10px;
+            }
+            
+            &__button {
+                margin-top: 15px;
+                position: absolute;
+                right: -40px;
+                bottom: -60px;
+            }
+        }
+    }
+
+    /* PRECIO */
+    .price {
+        display: flex;
+        align-items: flex-end;
+
+        &-number {
+            font-size: 42px;
+            margin: 0;
+        }
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width:1024px) {
+    #body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* QUITA EL EL VALOR STICKY PARA QUE EN DESKTOP NO SE MUEVA */
+    .options {
+        position: static;
+        width: 220px;
+        box-shadow: 0px 5px 10px 3px $details;
+
+        &-button {
+            cursor: pointer;
+            height: 40px;
+            width: 100px;
+            font-size: 12px;
+        }
+    }
+
+    /* FONDO DE LA PRICING TOGGLE */
+    .pricing-toggle {
+        width: 90vw;
+        max-width: 1000px;
+        background-color: white;
+        margin: 50px 0;
+        border-radius: 25px;
+    }
+
+    /* TITULO */
+    .title {
+        &-text {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        &-decoration {
+            width: 40px;
+            height: 3px;
+        }
+    } 
+
+    /* CONTENEDOR DE LOS PRODUCTOS */
+    .products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 50px 0px;
+    }
+
+    /* TARJETA DE LOS PRODUCTOS */
+    .card {
+        height: 400px;
+        width: 250px;
+        background-color: white;
+        border-radius: 30px;
+        margin: 15px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $mainFont;
+        box-shadow: 0px 5px 10px 3px rgb(170, 170, 170);
+
+        &-main,
+        &-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+
+            /* TITULO */
+            &__title {
+                font-size: 15px;
+                margin-top: 0;
+            }
+
+            /* ICONOS */
+            &__icon {
+                // height: 80px;
+                // width: 80px;
+                background-color: $mainGreen;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* BOTÓN DEL PRODUCTO */
+            &__button {
+                height: 45px;
+                width: 200px;
+                border-radius: 25px;
+                border: none;
+                background-color: $mainGreen;
+                color: white;
+                font-size: 12px;
+                position: static;
+                cursor: pointer;
+                transition-property: background-color;
+                transition-duration: .5s;
+
+                &:hover {
+                    background-color: #36faa8;
+                }
+            }
+        }
+
+        &-main {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        &-description {
+            margin-bottom: 15px;
+        }
+
+        /* SERVICIOS */
+        &-services {
+            list-style: none;
+            padding: 0;
+            color: rgb(100, 100, 100);
+            font-size: 10px;
+        }
+    }
+
+    /* PRECIO */
+    .price {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        &-number {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* MENSUAL O ANUAL */
+        &-month {
+            margin: 0 0 10px 0;
+            font-size: 10px;
+        }
+    }
+
+    /* EFECTO BOTÓN NO SELECCIONADO */
+    .none-selected {
+        background-color: $secondGreen;
+        color: $mainGreen;
+        transition-property: border;
+        transition-duration: .1s;
+
+        &:hover {
+            border: 3px solid $mainGreen;
+        }
+    }
+}
+
+/* DESKTOP SUPERIOR A 1200px */
+@media screen and (min-width: 1200px) {
+
+    
+}

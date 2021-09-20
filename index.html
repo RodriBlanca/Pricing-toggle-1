@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Pricing Toggle</title>
+</head>
+<body class="body" id="body">
+    <!-- CONTENEDOR DEL PRICING TOGGLE -->
+    <div class="pricing-toggle" id="pricing-toggle">
+
+        <!-- TITULO Y OPCIONES PARA EL USUARIO -->
+        <div class="title">
+            <!-- TITULO DE LA SECCIÓN -->
+            <h1 class="title-text">Pricing Toggle 1</h1>
+
+            <!-- LÍNEA VERDE DECORATIVA -->
+            <div class="title-decoration"></div>
+        </div>
+
+        <!-- OPCIONES MENSUAL Y ANUAL -->
+        <div class="options">
+            <button class="options-button monthly" id="monthly">Monthly</button>
+            <button class="options-button annualy none-selected" id="annualy">Annualy</button>
+        </div>
+
+        <!-- PRODUCTOS -->
+        <div class="products">
+            <!-- PRODUCTO BASIC -->
+            <div class="card" id="basic">
+                <div class="card-main">
+                    <!-- TITULO DEL PRODUCTO -->
+                    <h2 class="card-main__title">Basic</h2>
+                    <!-- ICONO DEL PRODUCTO -->
+                    <div class="card-main__icon">
+                        
+                    </div>
+                </div>
+                <div class="card-description">    
+                    <!-- PRECIO DEL PRODUCTO -->
+                    <div class="price">
+                        <p class="price-number" id="basic-price">$39</p>
+                        <p class="price-month" id="basic-package">/Monthly</p>
+                    </div>
+                    <!-- SERVICIOS -->
+                    <ul class="card-services">
+                        <li class="card-services__item">1 Gb Diskspace</li>
+                        <li class="card-services__item">10 Gb Bandwidth</li>
+                        <li class="card-services__item">2 Email Adress</li>
+                        <li class="card-services__item">WordPress Installs</li>
+                        <li class="card-services__item">Private Support</li>
+                    </ul>
+                    <!-- BOTÓN DEL PRODUCTO -->
+                    <button class="card-description__button">Sign Up</button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO PREMIUM -->
+            <div class="card" id="premium">
+                <div class="card-main">
+                    <!-- TITULO DEL PRODUCTO -->
+                    <h2 class="card-main__title">Premium</h2>
+                    <!-- ICONO DEL PRODUCTO -->
+                    <div class="card-main__icon">
+                        <!-- GRÁFICO -->
+                        <div class="grafico">
+                            <!-- EJE Y -->
+                            <span class="grafico-linea eje-y"></span>
+                            <!-- EJE X -->
+                            <span class="grafico-linea eje-x"></span>
+                            <!-- LINEA ASCENDENTE 1 -->
+                            <span class="grafico-linea ascendente1"></span>
+                            <!-- LINEA DESCENDENTE -->
+                            <span class="grafico-linea descendente"></span>
+                            <!-- LINEA ASCENDENTE 2 -->
+                            <span class="grafico-linea ascendente2"></span>
+                            <!-- FLECHA -->
+                            <span class="grafico-linea flecha"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-description">
+                    <!-- PRECIO DEL PRODUCTO -->
+                    <div class="price">
+                        <p class="price-number" id="premium-price">$49</p>
+                        <p class="price-month" id="premium-package">/Monthly</p>
+                    </div>
+                    <!-- SERVICIOS -->
+                    <ul class="card-services">
+                        <li class="card-services__item">5 Gb Diskspace</li>
+                        <li class="card-services__item">50 Gb Bandwidth</li>
+                        <li class="card-services__item">4 Email Adress</li>
+                        <li class="card-services__item">WordPress Installs</li>
+                        <li class="card-services__item">Private Support</li>
+                    </ul>
+                    <!-- BOTÓN DEL PRODUCTO -->
+                    <button class="card-description__button">Sign Up</button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO BUSINESS -->
+            <div class="card" id="business">
+                <div class="card-main">
+                    <!-- TITULO DEL PRODUCTO -->
+                    <h2 class="card-main__title">Business</h2>
+                    <!-- ICONO DEL PRODUCTO -->
+                    <div class="card-main__icon">
+                        <!-- EDIFICIOS -->
+                        <div class="edificios">
+                            <!-- EDIFICIO 1 -->
+                            <div class="edificio primer-edificio">
+                                <!-- Chimeneas -->
+                                <span class="primer-edificio__chimenea"></span>
+                                <!-- Ventanas 1 -->
+                                <span class="primer-edificio__ventanas ventanas-superiores"></span>
+                                <!-- Ventanas 2 -->
+                                <span class="primer-edificio__ventanas ventanas-inferiores"></span>
+                            </div>
+
+                            <!-- EDIFICIO 2 -->
+                            <div class="edificio segundo-edificio">
+                                <span class="segundo-edificio__ventanas"></span>
+                            </div>
+
+                            <!-- EDIFICIO 3 -->
+                            <div class="edificio tercer-edificio">
+                                <span class="tercer-edificio__ventanas"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-description">
+                    <!-- PRECIO DEL PRODUCTO -->
+                    <div class="price">
+                        <p class="price-number" id="business-price">$59</p>
+                        <p class="price-month" id="business-package">/Monthly</p>
+                    </div>
+                    <!-- SERVICIOS -->
+                    <ul class="card-services">
+                        <li class="card-services__item">20 Gb Diskspace</li>
+                        <li class="card-services__item">100 Gb Bandwidth</li>
+                        <li class="card-services__item">10 Email Adress</li>
+                        <li class="card-services__item">WordPress Installs</li>
+                        <li class="card-services__item">Private Support</li>
+                    </ul>
+                    <!-- BOTÓN DEL PRODUCTO -->
+                    <button class="card-description__button">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/app.js"></script>
+</body>
+</html>
