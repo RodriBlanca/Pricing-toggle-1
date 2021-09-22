@@ -1,13 +1,13 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 /* MOBILE */
 @media screen and (min-width: 270px) {
-  #body {
+  .body {
     background-color: #5b57f2;
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
   }
-  /* CONTENEDOR */
+  /* CONTAINER */
   .pricing-toggle {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -39,43 +39,54 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: white;
+    background-color: #FFFFFF;
     border-radius: 25px;
     margin-top: 25px;
-    /* TITULO */
-    /* LINEA DE DECORACIÓN */
+    -webkit-box-shadow: 0px 1px 30px 1px #2B2B2B;
+            box-shadow: 0px 1px 30px 1px #2B2B2B;
+    /* DECORATION LINE */
+    /* TITLE */
   }
-  .title-text {
-    font-family: "Poppins", sans-serif;
-    margin: 0 0 15px 0;
-  }
-  .title-decoration {
+  .title::after {
+    content: '';
     width: 50px;
     height: 5px;
     background-color: #26c281;
     border-radius: 30px;
   }
-  /* OPCIONES MENSUAL Y ANUAL */
+  .title-text {
+    margin: 0 0 15px 0;
+  }
+  /* MONTHLY AND ANNUALY OPTIONS */
   .options {
     width: 250px;
     height: 65px;
-    background-color: white;
+    background-color: #FFFFFF;
     border-radius: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     margin-top: 20px;
     position: -webkit-sticky;
     position: sticky;
     top: 10px;
-    -webkit-box-shadow: 0px 5px 10px 3px #292929;
-            box-shadow: 0px 5px 10px 3px #292929;
+    -webkit-box-shadow: 0px 1px 30px 1px #2B2B2B;
+            box-shadow: 0px 1px 30px 1px #2B2B2B;
     z-index: 100;
   }
   .options-button {
@@ -84,23 +95,11 @@
     border-radius: 25px;
     border: none;
   }
-  /* BOTÓN MENSUAL */
-  .monthly {
-    background-color: #26c281;
-    color: white;
-    font-family: "Poppins", sans-serif;
-  }
-  /* BOTÓN ANUAL */
-  .annualy {
-    background-color: #e7faf4;
-    color: #26c281;
-    font-family: "Poppins", sans-serif;
-  }
-  /* TARJETA DE LOS PRODUCTOS */
+  /* PRODUCTS CARD */
   .card {
     height: 425px;
     width: 260px;
-    background-color: white;
+    background-color: #FFFFFF;
     border-radius: 30px;
     margin: 15px auto;
     display: -webkit-box;
@@ -116,8 +115,9 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-family: "Poppins", sans-serif;
-    /* SERVICIOS */
+    -webkit-box-shadow: 0px 1px 30px 1px #2B2B2B;
+            box-shadow: 0px 1px 30px 1px #2B2B2B;
+    /* SERVICES */
   }
   .card-main, .card-description {
     display: -webkit-box;
@@ -133,12 +133,12 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    /* TITULO */
-    /* ICONOS */
-    /* BOTÓN DEL PRODUCTO */
+    /* TITLE */
+    /* ICONS */
+    /* PRODUCT BUTTON */
   }
   .card-main__title, .card-description__title {
-    font-size: 20px;
+    font-size: 1.25em;
     margin: 10px 0 10px 0;
   }
   .card-main__icon, .card-description__icon {
@@ -149,6 +149,10 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -162,8 +166,8 @@
     border-radius: 25px;
     border: none;
     background-color: #26c281;
-    color: white;
-    font-size: 17px;
+    color: #FFFFFF;
+    font-size: 1.1em;
   }
   .card-main {
     margin-bottom: 20px;
@@ -173,9 +177,9 @@
     padding: 0;
     color: #a39da9;
     text-align: center;
-    font-size: 14px;
+    font-size: .9em;
   }
-  /* PRECIO */
+  /* PRICE */
   .price {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -183,29 +187,28 @@
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    /* MENSUAL O ANUAL */
+    /* MONTHLY OR ANNUALY */
   }
   .price-number {
-    font-size: 37px;
+    font-size: 2.3em;
     font-weight: bold;
     margin: 0;
   }
   .price-month {
     margin: 0 0 10px 0;
-    font-size: 13px;
+    font-size: .8em;
     color: #a39da9;
   }
-  /* GRAFICO TORTA */
+  /* CAKE GRAPHIC */
   .cake {
     height: 30px;
     width: 30px;
-    background-color: white;
-    position: absolute;
+    background-color: #FFFFFF;
     border-radius: 50%;
-    background-image: conic-gradient(#26c281 0deg, #26c281 90deg 135deg, white 135deg);
+    background-image: conic-gradient(#26c281 0deg, #26c281 90deg 135deg, #FFFFFF 135deg);
     position: relative;
-    /* PORCIÓN 1 */
-    /* PORCIÓN 2 */
+    /* PORTION 1 */
+    /* PORTION 2 */
   }
   .cake::before {
     content: "";
@@ -214,7 +217,7 @@
     position: absolute;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 15px solid white;
+    border-bottom: 15px solid #FFFFFF;
     border-radius: 50%;
     -webkit-transform: rotate(215deg);
             transform: rotate(215deg);
@@ -227,15 +230,15 @@
     position: absolute;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 15px solid white;
+    border-bottom: 15px solid #FFFFFF;
     border-radius: 50%;
-    -webkit-transform: rotate(285deg);
-            transform: rotate(285deg);
+    -webkit-transform: rotate(283deg);
+            transform: rotate(283deg);
     top: 9px;
     right: -2px;
   }
-  /* GRAFICO */
-  .grafico {
+  /* GRAPHIC */
+  .graphic {
     height: 30px;
     width: 30px;
     overflow: hidden;
@@ -243,21 +246,21 @@
     object-fit: contain;
     position: relative;
   }
-  .grafico-linea {
+  .graphic-line {
     position: absolute;
-    background-color: white;
+    background-color: #FFFFFF;
   }
-  .eje-y {
+  .y-axis {
     height: 25px;
     width: 3px;
     top: 5px;
   }
-  .eje-x {
+  .x-axis {
     height: 3px;
     width: 30px;
     bottom: 0;
   }
-  .ascendente1 {
+  .upward1 {
     height: 3px;
     width: 8px;
     top: 50%;
@@ -265,7 +268,7 @@
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
   }
-  .descendente {
+  .falling {
     height: 3px;
     width: 10px;
     top: 50%;
@@ -273,7 +276,7 @@
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  .ascendente2 {
+  .upward2 {
     height: 3px;
     width: 8px;
     top: 50%;
@@ -281,7 +284,7 @@
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
   }
-  .flecha {
+  .arrow {
     position: absolute;
     height: 0;
     width: 0;
@@ -292,55 +295,54 @@
     transform: rotate(45deg);
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 7px solid white;
+    border-bottom: 7px solid #FFFFFF;
   }
-  /* EDIFICIOS */
-  .edificios {
+  /* BUILDINGS */
+  .buildings {
     height: 30px;
     width: 30px;
     position: relative;
   }
-  .edificio {
+  .building {
     position: absolute;
-    background-color: white;
+    background-color: #FFFFFF;
   }
-  .primer-edificio {
+  .first-building {
     width: 16px;
     height: 32px;
     bottom: 0;
     left: -4px;
-    /* CHIMENEAS */
-    /* VENTANAS */
+    /* FIREPLACES */
+    /* WINDOWS */
   }
-  .primer-edificio__chimenea {
+  .first-building__fireplace {
     position: absolute;
     width: 2.8px;
     height: 6px;
-    background-color: white;
+    background-color: #FFFFFF;
     top: -6px;
     left: 4px;
   }
-  .primer-edificio__chimenea:before {
+  .first-building__fireplace:before {
     content: "";
     position: absolute;
     width: 2.8px;
     height: 6px;
-    background-color: white;
+    background-color: #FFFFFF;
     top: 0;
     left: 6.8px;
   }
-  .primer-edificio__ventanas {
+  .first-building__windows {
     height: 4px;
     width: 4px;
     background-color: #26c281;
     position: absolute;
     left: 2.4px;
   }
-  .ventanas-superiores {
+  .top-windows {
     top: 4px;
   }
-  .ventanas-superiores::before,
-  .ventanas-superiores::after {
+  .top-windows::before, .top-windows::after {
     content: "";
     height: 4px;
     width: 4px;
@@ -348,14 +350,13 @@
     background-color: #26c281;
     left: 6.8px;
   }
-  .ventanas-superiores::after {
+  .top-windows::after {
     top: 8px;
   }
-  .ventanas-inferiores {
+  .bottom-windows {
     top: 12px;
   }
-  .ventanas-inferiores::before,
-  .ventanas-inferiores::after {
+  .bottom-windows::before, .bottom-windows::after {
     content: "";
     height: 4px;
     width: 4px;
@@ -364,16 +365,16 @@
     left: 6.8px;
     top: 8px;
   }
-  .ventanas-inferiores::after {
+  .bottom-windows::after {
     left: 0;
   }
-  .segundo-edificio {
+  .second-building {
     width: 12px;
     height: 38px;
     bottom: 0;
     left: 12px;
   }
-  .segundo-edificio::before {
+  .second-building::before {
     content: "";
     height: 4px;
     width: 4px;
@@ -382,7 +383,7 @@
     top: 2px;
     left: 4px;
   }
-  .segundo-edificio__ventanas {
+  .second-building__windows {
     height: 4px;
     width: 4px;
     position: absolute;
@@ -390,7 +391,7 @@
     top: 10px;
     left: 4px;
   }
-  .segundo-edificio__ventanas::before {
+  .second-building__windows::before {
     content: "";
     height: 4px;
     width: 4px;
@@ -399,13 +400,13 @@
     top: 8px;
     left: 0;
   }
-  .tercer-edificio {
+  .third-building {
     width: 12px;
     height: 24px;
     bottom: 0;
     left: 24px;
   }
-  .tercer-edificio__ventanas {
+  .third-building__windows {
     height: 4px;
     width: 4px;
     position: absolute;
@@ -413,7 +414,7 @@
     top: 4px;
     left: 4px;
   }
-  .tercer-edificio__ventanas::before {
+  .third-building__windows::before {
     content: "";
     height: 4px;
     width: 4px;
@@ -422,24 +423,35 @@
     top: 8px;
     left: 0;
   }
+  /* NONE SELECTED BUTTON EFFECT */
+  .none-selected {
+    background-color: #e7faf4;
+    color: #26c281;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+  }
+  .none-selected:hover {
+    border: 3px solid #26c281;
+  }
+  .selected-button {
+    background-color: #26c281;
+    color: #FFFFFF;
+  }
 }
 
 /* TABLET */
 @media screen and (min-width: 600px) {
-  /* TITULO */
+  /* TITLE */
   .title {
     height: 100px;
     width: 95vw;
     max-width: 620px;
   }
-  /* TARJETAS DE LOS PRODUCTOS */
+  /* PRODUCT CARDS */
   .card {
     height: 300px;
     width: 95vw;
     max-width: 620px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -456,7 +468,8 @@
     width: 100px;
   }
   .card-description {
-    margin-right: 100px;
+    width: 200px;
+    margin-right: 60px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -468,7 +481,7 @@
   }
   .card-main__title, .card-description__title {
     margin-top: 30px;
-    font-size: 30px;
+    font-size: 1.9em;
   }
   .card-main__icon, .card-description__icon {
     margin-top: 10px;
@@ -476,27 +489,24 @@
   .card-main__button, .card-description__button {
     margin-top: 15px;
     position: absolute;
-    right: -45px;
+    right: -15px;
     bottom: -60px;
   }
-  /* PRECIO */
+  /* PRICE */
   .price {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
   }
   .price-number {
-    font-size: 42px;
+    font-size: 2.6em;
     margin: 0;
   }
 }
 
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
-  #body {
+  .body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -504,12 +514,11 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  /* QUITA EL EL VALOR STICKY PARA QUE EN DESKTOP NO SE MUEVA */
   .options {
-    position: static;
+    position: initial;
     width: 220px;
-    -webkit-box-shadow: 0px 5px 10px 3px #a39da9;
-            box-shadow: 0px 5px 10px 3px #a39da9;
+    -webkit-box-shadow: 0px 5px 20px 1px #E7E8EA;
+            box-shadow: 0px 5px 20px 1px #E7E8EA;
   }
   .options-button {
     cursor: pointer;
@@ -517,43 +526,49 @@
     width: 100px;
     font-size: 12px;
   }
-  /* FONDO DE LA PRICING TOGGLE */
   .pricing-toggle {
     width: 90vw;
     max-width: 1000px;
-    background-color: white;
+    background-color: #FFFFFF;
     margin: 100px 0;
     border-radius: 25px;
+    -webkit-box-shadow: 0px 1px 30px 1px #2B2B2B;
+            box-shadow: 0px 1px 30px 1px #2B2B2B;
   }
-  /* TITULO */
+  /* TITLE */
+  .title {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   .title-text {
-    font-size: 30px;
+    font-size: 1.9em;
     margin-bottom: 10px;
   }
-  .title-decoration {
-    width: 40px;
-    height: 3px;
-  }
-  /* CONTENEDOR DE LOS PRODUCTOS */
+  /* PRODUCTS CONTAINER */
   .products {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
     width: 100%;
     margin: 50px 0px;
   }
-  /* TARJETA DE LOS PRODUCTOS */
+  /* PRODUCT CARDS */
   .card {
     height: 400px;
     width: 250px;
-    background-color: white;
-    border-radius: 30px;
+    background-color: #FFFFFF;
     margin: 15px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -568,68 +583,34 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-family: "Poppins", sans-serif;
-    -webkit-box-shadow: 0px 5px 10px 3px #aaaaaa;
-            box-shadow: 0px 5px 10px 3px #aaaaaa;
-    -webkit-transition-property: -webkit-box-shadow;
-    transition-property: -webkit-box-shadow;
-    transition-property: box-shadow;
-    transition-property: box-shadow, -webkit-box-shadow;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
-    /* SERVICIOS */
+    -webkit-box-shadow: 0px 5px 10px 3px #E7E8EA;
+            box-shadow: 0px 5px 10px 3px #E7E8EA;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    /* SERVICES */
   }
   .card-main, .card-description {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    margin: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0;
-    /* TITULO */
-    /* ICONOS */
-    /* BOTÓN DEL PRODUCTO */
+    /* TITLE */
+    /* PRODUCT BUTTON */
   }
   .card-main__title, .card-description__title {
-    font-size: 15px;
+    font-size: .9em;
     margin-top: 0;
-  }
-  .card-main__icon, .card-description__icon {
-    background-color: #26c281;
-    border-radius: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .card-main__button, .card-description__button {
     height: 45px;
     width: 200px;
-    border-radius: 25px;
-    border: none;
-    background-color: #26c281;
-    color: white;
-    font-size: 12px;
-    position: static;
+    font-size: .75em;
+    position: initial;
     right: 0;
     cursor: pointer;
-    -webkit-transition-property: background-color;
-    transition-property: background-color;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
   }
   .card-main__button:hover, .card-description__button:hover {
     background-color: #36faa8;
@@ -640,52 +621,29 @@
   }
   .card-description {
     margin-bottom: 15px;
+    width: initial;
   }
   .card-services {
-    list-style: none;
-    padding: 0;
-    color: #a39da9;
-    font-size: 10px;
+    font-size: .6em;
   }
   .card:hover {
-    -webkit-box-shadow: 0px 5px 10px 3px #616161;
-            box-shadow: 0px 5px 10px 3px #616161;
+    -webkit-box-shadow: 0px 5px 10px 3px #919191;
+            box-shadow: 0px 5px 10px 3px #919191;
   }
-  /* PRECIO */
+  /* PRICE */
   .price {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    /* MENSUAL O ANUAL */
+    /* MONTHLY OR ANNUALY */
   }
   .price-number {
-    font-size: 30px;
+    font-size: 1.9em;
     font-weight: bold;
     margin: 0;
   }
   .price-month {
-    margin: 0 0 10px 0;
-    font-size: 10px;
-  }
-  /* EFECTO BOTÓN NO SELECCIONADO */
-  .none-selected {
-    background-color: #e7faf4;
-    color: #26c281;
-    -webkit-transition-property: border;
-    transition-property: border;
-    -webkit-transition-duration: 0.1s;
-            transition-duration: 0.1s;
-  }
-  .none-selected:hover {
-    border: 3px solid #26c281;
+    font-size: .6em;
   }
 }
-
-/* DESKTOP SUPERIOR A 1200px */
 /*# sourceMappingURL=styles.css.map */

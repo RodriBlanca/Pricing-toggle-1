@@ -7,49 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Pricing Toggle</title>
+    <title>Pricing Toggle 1</title>
 </head>
 
-<body class="body" id="body">
-    <!-- CONTENEDOR DEL PRICING TOGGLE -->
-    <div class="pricing-toggle" id="pricing-toggle">
-
-        <!-- TITULO Y OPCIONES PARA EL USUARIO -->
+<body class="body">
+    <!-- PRICING TOGGLE CONTAINER -->
+    <div class="pricing-toggle">
         <div class="title">
-            <!-- TITULO DE LA SECCIÓN -->
             <h1 class="title-text">Pricing Toggle 1</h1>
-
-            <!-- LÍNEA VERDE DECORATIVA -->
-            <div class="title-decoration"></div>
         </div>
 
-        <!-- OPCIONES MENSUAL Y ANUAL -->
+        <!-- MONTHLY AND ANNUALY OPTIONS -->
         <div class="options">
-            <button class="options-button monthly" id="monthly">Monthly</button>
-            <button class="options-button annualy none-selected" id="annualy">Annualy</button>
+            <button class="options-button selected-button" id="monthly" type="button">Monthly</button>
+            <button class="options-button none-selected" id="annualy" type="button">Annualy</button>
         </div>
 
-        <!-- PRODUCTOS -->
+        <!-- PRODUCTS -->
         <div class="products">
-            <!-- PRODUCTO BASIC -->
-            <div class="card" id="basic">
+            <!-- BASIC PRODUCT -->
+            <div class="card">
                 <div class="card-main">
-                    <!-- TITULO DEL PRODUCTO -->
                     <h2 class="card-main__title">Basic</h2>
-                    <!-- ICONO DEL PRODUCTO -->
                     <div class="card-main__icon">
-                        <div class="cake">
-                            <span></span>
-                        </div>
+                        <div class="cake"></div>
                     </div>
                 </div>
                 <div class="card-description">
-                    <!-- PRECIO DEL PRODUCTO -->
                     <div class="price">
                         <p class="price-number" id="basic-price">$39</p>
                         <p class="price-month" id="basic-package">/Monthly</p>
                     </div>
-                    <!-- SERVICIOS -->
                     <ul class="card-services">
                         <li class="card-services__item">1 Gb Diskspace</li>
                         <li class="card-services__item">10 Gb Bandwidth</li>
@@ -57,42 +45,37 @@
                         <li class="card-services__item">WordPress Installs</li>
                         <li class="card-services__item">Private Support</li>
                     </ul>
-                    <!-- BOTÓN DEL PRODUCTO -->
-                    <button class="card-description__button">Sign Up</button>
+                    <button class="card-description__button" type="button">Sign Up</button>
                 </div>
             </div>
 
-            <!-- PRODUCTO PREMIUM -->
-            <div class="card" id="premium">
+            <!-- PREMIUM PRODUCT -->
+            <div class="card">
                 <div class="card-main">
-                    <!-- TITULO DEL PRODUCTO -->
                     <h2 class="card-main__title">Premium</h2>
-                    <!-- ICONO DEL PRODUCTO -->
                     <div class="card-main__icon">
-                        <!-- GRÁFICO -->
-                        <div class="grafico">
-                            <!-- EJE Y -->
-                            <span class="grafico-linea eje-y"></span>
-                            <!-- EJE X -->
-                            <span class="grafico-linea eje-x"></span>
-                            <!-- LINEA ASCENDENTE 1 -->
-                            <span class="grafico-linea ascendente1"></span>
-                            <!-- LINEA DESCENDENTE -->
-                            <span class="grafico-linea descendente"></span>
-                            <!-- LINEA ASCENDENTE 2 -->
-                            <span class="grafico-linea ascendente2"></span>
-                            <!-- FLECHA -->
-                            <span class="grafico-linea flecha"></span>
+                        <!-- GRAPHIC -->
+                        <div class="graphic">
+                            <!-- Y AXIS -->
+                            <span class="graphic-line y-axis"></span>
+                            <!-- X AXIS -->
+                            <span class="graphic-line x-axis"></span>
+                            <!-- UPWARD LINE 1 -->
+                            <span class="graphic-line upward1"></span>
+                            <!-- FALLING LINE -->
+                            <span class="graphic-line falling"></span>
+                            <!-- UPWARD LINE 2 -->
+                            <span class="graphic-line upward2"></span>
+                            <!-- ARROW -->
+                            <span class="graphic-line arrow"></span>
                         </div>
                     </div>
                 </div>
                 <div class="card-description">
-                    <!-- PRECIO DEL PRODUCTO -->
                     <div class="price">
                         <p class="price-number" id="premium-price">$49</p>
                         <p class="price-month" id="premium-package">/Monthly</p>
                     </div>
-                    <!-- SERVICIOS -->
                     <ul class="card-services">
                         <li class="card-services__item">5 Gb Diskspace</li>
                         <li class="card-services__item">50 Gb Bandwidth</li>
@@ -100,49 +83,44 @@
                         <li class="card-services__item">WordPress Installs</li>
                         <li class="card-services__item">Private Support</li>
                     </ul>
-                    <!-- BOTÓN DEL PRODUCTO -->
-                    <button class="card-description__button">Sign Up</button>
+                    <button class="card-description__button" type="button">Sign Up</button>
                 </div>
             </div>
 
-            <!-- PRODUCTO BUSINESS -->
-            <div class="card" id="business">
+            <!-- BUSINESS PRODUCT -->
+            <div class="card">
                 <div class="card-main">
-                    <!-- TITULO DEL PRODUCTO -->
                     <h2 class="card-main__title">Business</h2>
-                    <!-- ICONO DEL PRODUCTO -->
                     <div class="card-main__icon">
-                        <!-- EDIFICIOS -->
-                        <div class="edificios">
-                            <!-- EDIFICIO 1 -->
-                            <div class="edificio primer-edificio">
-                                <!-- Chimeneas -->
-                                <span class="primer-edificio__chimenea"></span>
-                                <!-- Ventanas 1 -->
-                                <span class="primer-edificio__ventanas ventanas-superiores"></span>
-                                <!-- Ventanas 2 -->
-                                <span class="primer-edificio__ventanas ventanas-inferiores"></span>
+                        <!-- BUILDINGS -->
+                        <div class="buildings">
+                            <!-- BUILDING 1 -->
+                            <div class="building first-building">
+                                <!-- FIREPLACE -->
+                                <span class="first-building__fireplace"></span>
+                                <!-- WINDOWS 1 -->
+                                <span class="first-building__windows top-windows"></span>
+                                <!-- WINDOWS 2 -->
+                                <span class="first-building__windows bottom-windows"></span>
                             </div>
 
-                            <!-- EDIFICIO 2 -->
-                            <div class="edificio segundo-edificio">
-                                <span class="segundo-edificio__ventanas"></span>
+                            <!-- BUILDING 2 -->
+                            <div class="building second-building">
+                                <span class="second-building__windows"></span>
                             </div>
 
-                            <!-- EDIFICIO 3 -->
-                            <div class="edificio tercer-edificio">
-                                <span class="tercer-edificio__ventanas"></span>
+                            <!-- BUILDING 3 -->
+                            <div class="building third-building">
+                                <span class="third-building__windows"></span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-description">
-                    <!-- PRECIO DEL PRODUCTO -->
                     <div class="price">
                         <p class="price-number" id="business-price">$59</p>
                         <p class="price-month" id="business-package">/Monthly</p>
                     </div>
-                    <!-- SERVICIOS -->
                     <ul class="card-services">
                         <li class="card-services__item">20 Gb Diskspace</li>
                         <li class="card-services__item">100 Gb Bandwidth</li>
@@ -150,8 +128,7 @@
                         <li class="card-services__item">WordPress Installs</li>
                         <li class="card-services__item">Private Support</li>
                     </ul>
-                    <!-- BOTÓN DEL PRODUCTO -->
-                    <button class="card-description__button">Sign Up</button>
+                    <button class="card-description__button" type="button">Sign Up</button>
                 </div>
             </div>
         </div>

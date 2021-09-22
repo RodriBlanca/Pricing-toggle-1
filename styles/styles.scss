@@ -1,73 +1,76 @@
-// IMPORTACIÓN DE GOOGLE FONTS
+// IMPORT GOOGLE FONTS
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 // VARIABLES
-// Color fondo / violeta
 $background: #5b57f2;
-// Color detalles / verde
 $mainGreen: #26c281;
-// Color detalles 2 / botón no seleccionado / verde más claro
 $secondGreen: #e7faf4;
-// Color letras / gris
 $details: #a39da9;
-// Letra
+$white: #FFFFFF;
+$shadow: #E7E8EA;
+$selectedShadow: #919191; 
+$greenHover: #36faa8;
+$tableShadow: #2B2B2B;
 $mainFont: "Poppins", sans-serif;
+
+@mixin flexbox-styles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* MOBILE */
 @media screen and (min-width: 270px) {
-  #body {
+  .body {
     background-color: $background;
     margin: 0;
     padding: 0;
+    font-family: $mainFont;
   }
 
-  /* CONTENEDOR */
+  /* CONTAINER */
   .pricing-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexbox-styles;
   }
 
   .title {
     height: 100px;
     width: 270px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+    @include flexbox-styles;
+    background-color: $white;
     border-radius: 25px;
     margin-top: 25px;
+    box-shadow: 0px 1px 30px 1px $tableShadow;
 
-    /* TITULO */
-    &-text {
-      font-family: $mainFont;
-      margin: 0 0 15px 0;
-    }
-
-    /* LINEA DE DECORACIÓN */
-    &-decoration {
+    /* DECORATION LINE */
+    &::after {
+      content: '';
       width: 50px;
       height: 5px;
       background-color: $mainGreen;
       border-radius: 30px;
     }
+
+    /* TITLE */
+    &-text {
+      margin: 0 0 15px 0;
+    }
   }
 
-  /* OPCIONES MENSUAL Y ANUAL */
+  /* MONTHLY AND ANNUALY OPTIONS */
   .options {
     width: 250px;
     height: 65px;
-    background-color: white;
+    background-color: $white;
     border-radius: 50px;
-    display: flex;
+    @include flexbox-styles;
+    flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
     margin-top: 20px;
     position: sticky;
     top: 10px;
-    box-shadow: 0px 5px 10px 3px rgb(41, 41, 41);
+    box-shadow: 0px 1px 30px 1px $tableShadow;
     z-index: 100;
 
     &-button {
@@ -78,66 +81,44 @@ $mainFont: "Poppins", sans-serif;
     }
   }
 
-  /* BOTÓN MENSUAL */
-  .monthly {
-    background-color: $mainGreen;
-    color: white;
-    font-family: $mainFont;
-  }
-
-  /* BOTÓN ANUAL */
-  .annualy {
-    background-color: $secondGreen;
-    color: $mainGreen;
-    font-family: $mainFont;
-  }
-
-  /* TARJETA DE LOS PRODUCTOS */
+  /* PRODUCTS CARD */
   .card {
     height: 425px;
     width: 260px;
-    background-color: white;
+    background-color: $white;
     border-radius: 30px;
     margin: 15px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: $mainFont;
+    @include flexbox-styles;
+    box-shadow: 0px 1px 30px 1px $tableShadow;
 
     &-main,
     &-description {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flexbox-styles;
 
-      /* TITULO */
+      /* TITLE */
       &__title {
-        font-size: 20px;
+        font-size: 1.25em;
         margin: 10px 0 10px 0;
       }
 
-      /* ICONOS */
+      /* ICONS */
       &__icon {
         height: 80px;
         width: 80px;
         background-color: $mainGreen;
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox-styles;
       }
 
-      /* BOTÓN DEL PRODUCTO */
+      /* PRODUCT BUTTON */
       &__button {
         height: 50px;
         width: 230px;
         border-radius: 25px;
         border: none;
         background-color: $mainGreen;
-        color: white;
-        font-size: 17px;
+        color: $white;
+        font-size: 1.1em;
       }
     }
 
@@ -145,50 +126,49 @@ $mainFont: "Poppins", sans-serif;
       margin-bottom: 20px;
     }
 
-    /* SERVICIOS */
+    /* SERVICES */
     &-services {
       list-style: none;
       padding: 0;
       color: $details;
       text-align: center;
-      font-size: 14px;
+      font-size: .9em;
     }
   }
 
-  /* PRECIO */
+  /* PRICE */
   .price {
     display: flex;
     align-items: flex-end;
 
     &-number {
-      font-size: 37px;
+      font-size: 2.3em;
       font-weight: bold;
       margin: 0;
     }
 
-    /* MENSUAL O ANUAL */
+    /* MONTHLY OR ANNUALY */
     &-month {
       margin: 0 0 10px 0;
-      font-size: 13px;
+      font-size: .8em;
       color: $details;
     }
   }
 
-  /* GRAFICO TORTA */
+  /* CAKE GRAPHIC */
   .cake {
     height: 30px;
     width: 30px;
-    background-color: white;
-    position: absolute;
+    background-color: $white;
     border-radius: 50%;
     background-image: conic-gradient(
       $mainGreen 0deg,
       $mainGreen 90deg 135deg,
-      white 135deg
+      $white 135deg
     );
     position: relative;
 
-    /* PORCIÓN 1 */
+    /* PORTION 1 */
     &::before {
       content: "";
       height: 0;
@@ -196,13 +176,13 @@ $mainFont: "Poppins", sans-serif;
       position: absolute;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-bottom: 15px solid white;
+      border-bottom: 15px solid $white;
       border-radius: 50%;
       transform: rotate(215deg);
       right: -1px;
     }
 
-    /* PORCIÓN 2 */
+    /* PORTION 2 */
     &::after {
       content: "";
       height: 0;
@@ -210,42 +190,42 @@ $mainFont: "Poppins", sans-serif;
       position: absolute;
       border-left: 8px solid transparent;
       border-right: 8px solid transparent;
-      border-bottom: 15px solid white;
+      border-bottom: 15px solid $white;
       border-radius: 50%;
-      transform: rotate(285deg);
+      transform: rotate(283deg);
       top: 9px;
       right: -2px;
     }
   }
 
-  /* GRAFICO */
-  .grafico {
+  /* GRAPHIC */
+  .graphic {
     height: 30px;
     width: 30px;
     overflow: hidden;
     -o-object-fit: contain;
     object-fit: contain;
     position: relative;
+
+    &-line {
+      position: absolute;
+      background-color: $white;
+    }
   }
 
-  .grafico-linea {
-    position: absolute;
-    background-color: white;
-  }
-
-  .eje-y {
+  .y-axis {
     height: 25px;
     width: 3px;
     top: 5px;
   }
 
-  .eje-x {
+  .x-axis {
     height: 3px;
     width: 30px;
     bottom: 0;
   }
 
-  .ascendente1 {
+  .upward1 {
     height: 3px;
     width: 8px;
     top: 50%;
@@ -254,7 +234,7 @@ $mainFont: "Poppins", sans-serif;
     transform: rotate(135deg);
   }
 
-  .descendente {
+  .falling {
     height: 3px;
     width: 10px;
     top: 50%;
@@ -263,7 +243,7 @@ $mainFont: "Poppins", sans-serif;
     transform: rotate(45deg);
   }
 
-  .ascendente2 {
+  .upward2 {
     height: 3px;
     width: 8px;
     top: 50%;
@@ -272,7 +252,7 @@ $mainFont: "Poppins", sans-serif;
     transform: rotate(135deg);
   }
 
-  .flecha {
+  .arrow {
     position: absolute;
     height: 0;
     width: 0;
@@ -283,172 +263,188 @@ $mainFont: "Poppins", sans-serif;
     transform: rotate(45deg);
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 7px solid white;
+    border-bottom: 7px solid $white;
   }
 
-  /* EDIFICIOS */
-  .edificios {
+  /* BUILDINGS */
+  .buildings {
     height: 30px;
     width: 30px;
     position: relative;
   }
 
-  .edificio {
+  .building {
     position: absolute;
-    background-color: white;
+    background-color: $white;
   }
 
-  .primer-edificio {
+  .first-building {
     width: 16px;
     height: 32px;
     bottom: 0;
     left: -4px;
-    /* CHIMENEAS */
-    /* VENTANAS */
+
+    /* FIREPLACES */
+    &__fireplace {
+      position: absolute;
+      width: 2.8px;
+      height: 6px;
+      background-color: $white;
+      top: -6px;
+      left: 4px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 2.8px;
+        height: 6px;
+        background-color: $white;
+        top: 0;
+        left: 6.8px;
+      }
+    }
+
+    /* WINDOWS */
+    &__windows {
+      height: 4px;
+      width: 4px;
+      background-color: $mainGreen;
+      position: absolute;
+      left: 2.4px;
+    }
   }
 
-  .primer-edificio__chimenea {
-    position: absolute;
-    width: 2.8px;
-    height: 6px;
-    background-color: white;
-    top: -6px;
-    left: 4px;
-  }
-
-  .primer-edificio__chimenea:before {
-    content: "";
-    position: absolute;
-    width: 2.8px;
-    height: 6px;
-    background-color: white;
-    top: 0;
-    left: 6.8px;
-  }
-
-  .primer-edificio__ventanas {
-    height: 4px;
-    width: 4px;
-    background-color: $mainGreen;
-    position: absolute;
-    left: 2.4px;
-  }
-
-  .ventanas-superiores {
+  .top-windows {
     top: 4px;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 4px;
+      width: 4px;
+      position: absolute;
+      background-color: $mainGreen;
+      left: 6.8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
   }
 
-  .ventanas-superiores::before,
-  .ventanas-superiores::after {
-    content: "";
-    height: 4px;
-    width: 4px;
-    position: absolute;
-    background-color: $mainGreen;
-    left: 6.8px;
-  }
-
-  .ventanas-superiores::after {
-    top: 8px;
-  }
-
-  .ventanas-inferiores {
+  .bottom-windows {
     top: 12px;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 4px;
+      width: 4px;
+      position: absolute;
+      background-color: $mainGreen;
+      left: 6.8px;
+      top: 8px;
+    }
+
+    &::after {
+      left: 0;
+    }
   }
 
-  .ventanas-inferiores::before,
-  .ventanas-inferiores::after {
-    content: "";
-    height: 4px;
-    width: 4px;
-    position: absolute;
-    background-color: $mainGreen;
-    left: 6.8px;
-    top: 8px;
-  }
-
-  .ventanas-inferiores::after {
-    left: 0;
-  }
-
-  .segundo-edificio {
+  .second-building {
     width: 12px;
     height: 38px;
     bottom: 0;
     left: 12px;
+
+    &::before {
+      content: "";
+      height: 4px;
+      width: 4px;
+      position: absolute;
+      background-color: $mainGreen;
+      top: 2px;
+      left: 4px;
+    }
+
+    &__windows {
+      height: 4px;
+      width: 4px;
+      position: absolute;
+      background-color: $mainGreen;
+      top: 10px;
+      left: 4px;
+
+      &::before {
+        content: "";
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        background-color: $mainGreen;
+        top: 8px;
+        left: 0;
+      }
+    }
   }
 
-  .segundo-edificio::before {
-    content: "";
-    height: 4px;
-    width: 4px;
-    position: absolute;
-    background-color: $mainGreen;
-    top: 2px;
-    left: 4px;
-  }
-
-  .segundo-edificio__ventanas {
-    height: 4px;
-    width: 4px;
-    position: absolute;
-    background-color: $mainGreen;
-    top: 10px;
-    left: 4px;
-  }
-
-  .segundo-edificio__ventanas::before {
-    content: "";
-    height: 4px;
-    width: 4px;
-    position: absolute;
-    background-color: $mainGreen;
-    top: 8px;
-    left: 0;
-  }
-
-  .tercer-edificio {
+  .third-building {
     width: 12px;
     height: 24px;
     bottom: 0;
     left: 24px;
+
+    &__windows {
+      height: 4px;
+      width: 4px;
+      position: absolute;
+      background-color: $mainGreen;
+      top: 4px;
+      left: 4px;
+
+      &::before {
+        content: "";
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        background-color: $mainGreen;
+        top: 8px;
+        left: 0;
+      }
+    }
   }
 
-  .tercer-edificio__ventanas {
-    height: 4px;
-    width: 4px;
-    position: absolute;
-    background-color: $mainGreen;
-    top: 4px;
-    left: 4px;
+  /* NONE SELECTED BUTTON EFFECT */
+  .none-selected {
+    background-color: $secondGreen;
+    color: $mainGreen;
+    transition: all .1s ease;
+  
+    &:hover {
+      border: 3px solid $mainGreen;
+    }
   }
 
-  .tercer-edificio__ventanas::before {
-    content: "";
-    height: 4px;
-    width: 4px;
-    position: absolute;
+  .selected-button {
     background-color: $mainGreen;
-    top: 8px;
-    left: 0;
+    color: $white;
   }
 }
 
 /* TABLET */
 @media screen and (min-width: 600px) {
-  /* TITULO */
+
+  /* TITLE */
   .title {
     height: 100px;
     width: 95vw;
     max-width: 620px;
   }
 
-  /* TARJETAS DE LOS PRODUCTOS */
+  /* PRODUCT CARDS */
   .card {
     height: 300px;
     width: 95vw;
     max-width: 620px;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -459,7 +455,8 @@ $mainFont: "Poppins", sans-serif;
     }
 
     &-description {
-      margin-right: 100px;
+      width: 200px;
+      margin-right: 60px;
       flex-direction: column-reverse;
       justify-content: flex-start;
       position: relative;
@@ -469,7 +466,7 @@ $mainFont: "Poppins", sans-serif;
     &-description {
       &__title {
         margin-top: 30px;
-        font-size: 30px;
+        font-size: 1.9em;
       }
 
       &__icon {
@@ -479,19 +476,18 @@ $mainFont: "Poppins", sans-serif;
       &__button {
         margin-top: 15px;
         position: absolute;
-        right: -45px;
+        right: -15px;
         bottom: -60px;
       }
     }
   }
 
-  /* PRECIO */
+  /* PRICE */
   .price {
-    display: flex;
     align-items: flex-end;
 
     &-number {
-      font-size: 42px;
+      font-size: 2.6em;
       margin: 0;
     }
   }
@@ -499,16 +495,15 @@ $mainFont: "Poppins", sans-serif;
 
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
-  #body {
+  .body {
     display: flex;
     justify-content: center;
   }
 
-  /* QUITA EL EL VALOR STICKY PARA QUE EN DESKTOP NO SE MUEVA */
   .options {
-    position: static;
+    position: initial;
     width: 220px;
-    box-shadow: 0px 5px 10px 3px $details;
+    box-shadow: 0px 5px 20px 1px $shadow;
 
     &-button {
       cursor: pointer;
@@ -518,95 +513,66 @@ $mainFont: "Poppins", sans-serif;
     }
   }
 
-  /* FONDO DE LA PRICING TOGGLE */
   .pricing-toggle {
     width: 90vw;
     max-width: 1000px;
-    background-color: white;
+    background-color: $white;
     margin: 100px 0;
     border-radius: 25px;
+    box-shadow: 0px 1px 30px 1px $tableShadow;
   }
 
-  /* TITULO */
+  /* TITLE */
   .title {
+    box-shadow: none;
+
     &-text {
-      font-size: 30px;
+      font-size: 1.9em;
       margin-bottom: 10px;
     }
-
-    &-decoration {
-      width: 40px;
-      height: 3px;
-    }
   }
 
-  /* CONTENEDOR DE LOS PRODUCTOS */
+  /* PRODUCTS CONTAINER */
   .products {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox-styles;
+    flex-direction: row;
     width: 100%;
     margin: 50px 0px;
   }
 
-  /* TARJETA DE LOS PRODUCTOS */
+  /* PRODUCT CARDS */
   .card {
     height: 400px;
     width: 250px;
-    background-color: white;
-    border-radius: 30px;
+    background-color: $white;
     margin: 15px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: $mainFont;
-    box-shadow: 0px 5px 10px 3px rgb(170, 170, 170);
-    transition-property: box-shadow;
-    transition-duration: 0.5s;
+    @include flexbox-styles;
+    box-shadow: 0px 5px 10px 3px $shadow;
+    transition: all .5s ease;
 
     &-main,
     &-description {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       margin: 0;
+      flex-direction: column;
 
-      /* TITULO */
+      /* TITLE */
       &__title {
-        font-size: 15px;
+        font-size: .9em;
         margin-top: 0;
       }
 
-      /* ICONOS */
-      &__icon {
-        // height: 80px;
-        // width: 80px;
-        background-color: $mainGreen;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* BOTÓN DEL PRODUCTO */
+      /* PRODUCT BUTTON */
       &__button {
         height: 45px;
         width: 200px;
-        border-radius: 25px;
-        border: none;
-        background-color: $mainGreen;
-        color: white;
-        font-size: 12px;
-        position: static;
+        font-size: .75em;
+        position: initial;
         right: 0;
         cursor: pointer;
-        transition-property: background-color;
-        transition-duration: 0.5s;
+        transition: all .5s ease;
 
         &:hover {
-          background-color: #36faa8;
+          background-color: $greenHover;
         }
       }
     }
@@ -618,53 +584,32 @@ $mainFont: "Poppins", sans-serif;
 
     &-description {
       margin-bottom: 15px;
+      width: initial;
     }
 
-    /* SERVICIOS */
+    /* SERVICES */
     &-services {
-      list-style: none;
-      padding: 0;
-      color: $details;
-      font-size: 10px;
+      font-size: .6em;
     }
 
     &:hover {
-      box-shadow: 0px 5px 10px 3px rgb(97, 97, 97);
+      box-shadow: 0px 5px 10px 3px $selectedShadow;
     }
   }
 
-  /* PRECIO */
+  /* PRICE */
   .price {
-    display: flex;
     justify-content: center;
-    align-items: flex-end;
 
     &-number {
-      font-size: 30px;
+      font-size: 1.9em;
       font-weight: bold;
       margin: 0;
     }
 
-    /* MENSUAL O ANUAL */
+    /* MONTHLY OR ANNUALY */
     &-month {
-      margin: 0 0 10px 0;
-      font-size: 10px;
+      font-size: .6em;
     }
   }
-
-  /* EFECTO BOTÓN NO SELECCIONADO */
-  .none-selected {
-    background-color: $secondGreen;
-    color: $mainGreen;
-    transition-property: border;
-    transition-duration: 0.1s;
-
-    &:hover {
-      border: 3px solid $mainGreen;
-    }
-  }
-}
-
-/* DESKTOP SUPERIOR A 1200px */
-@media screen and (min-width: 1200px) {
 }
